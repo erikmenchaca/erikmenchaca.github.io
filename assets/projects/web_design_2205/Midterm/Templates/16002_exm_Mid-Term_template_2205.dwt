@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>16002_exm_Mid-Term_template_2205</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="link" -->
+<link rel="stylesheet" type="text/css" href="../assets/styles.css">
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	
+<table width="800" border="1" align="center">
+  <tbody>
+    <tr>
+      <td width="400" height="200" colspan="2" align="center"><h2>Logo </h2></td>
+      <td width="400" height="200" colspan="2" align="center"><h2>Banner </h2></td>
+    </tr>
+    <tr>
+      <td width="200" height="50" align="center">Flowers</td>
+      <td width="200" height="50" align="center">Travels</td>
+      <td width="200" height="50" align="center">Gallery</td>
+      <td width="200" height="50" align="center">Foods</td>
+    </tr>
+    <tr>
+      <td width="800" height="600" colspan="4" align="center">
+        <!-- TemplateBeginEditable name="Content" -->
+     <table height="600" width="800" border="0">
+  <tbody>
+   
+    <tr>
+      <td width="200" height="200" align="center" valign="middle">&nbsp;</td>
+      <td width="200" height="200" align="center" valign="middle">&nbsp;</td>
+      <td width="200" height="200" align="center" valign="middle">&nbsp;</td>
+      <td width="200" height="200" align="center" valign="middle">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="200" height="200" align="center">&nbsp;</td>
+      <td width="200" height="200" align="center">&nbsp;</td>
+      <td width="200" height="200" align="center">&nbsp;</td>
+      <td width="200" height="200" align="center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="200" colspan="2" align="center">&nbsp;</td>
+      <td height="200" colspan="2" align="center">&nbsp;</td>
+      </tr>
+
+  </tbody>
+</table>
+    <!-- TemplateEndEditable -->
+		</td>
+    </tr>
+    <tr>
+      <td width="800" height="60" colspan="4" align="center"><h2>Flowers | Travels | Gallery | Foods</h2></td>
+      </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>
