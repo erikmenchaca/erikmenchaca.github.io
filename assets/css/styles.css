@@ -2,22 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
 	font-family: 'Lato', sans-serif;
+	font-size: 16pt;
+	padding: 20px;
 }
+
 header {
 	text-align: center;
 }
 
 .aboutme {
-	margin-right: 1in;
-	display: block;
-<<<<<<< HEAD
-=======
+	margin-right: 3in;
 }
-.stacy > span {
-    display: block;
-    margin: 1em 0 1em 0;
-    font-size: 1.17em;
-	font-weight: bold;
-	
->>>>>>> cf8f4feefe1ee1d0cafc165853a697d1491c3433
+.erik {
+	margin-right: 2em;
+}
+
+table, td, tr, th{
+    border: 2px solid black;
+	border-collapse: collapse;
+	padding: 10px;
 }
