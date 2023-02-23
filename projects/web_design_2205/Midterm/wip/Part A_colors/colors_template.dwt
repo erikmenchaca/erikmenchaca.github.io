@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>colors</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	Name:<br />
+	Date:
+	<h3><strong>Example:</strong> <img src="Example.png" alt="Color Example" width="250"></h3>
+	<h3>How To:</h3>
+	<p>Browser:</p>
+	<p>Go to: <a href="https://color.adobe.com/create">https://color.adobe.com/create</a></p>
+	<p>Create 5 color clusters and repeat 4 times</p>
+  <p>&nbsp;</p>
+  <p>Dreamweaver:</p>
+  <p>Window &gt; Properties      </p>
+      <p>Position the mouse cursor inside a white box. </p>
+      <p>Go to the Properties panel and click on &quot;Bg&quot; white square</p>
+      <p>Type in the HEX# and press Enter</p>
+      <p>Go to URL to convert HEX# to RGB via <a href="https://rgbcolorcode.com/color/converter/">https://rgbcolorcode.com/color/converter/</a> </p>
+      <p>Option #1:</p>
+<table width="600" height="90" border="1">
+  <tbody>
+    <tr align="center">
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+    </tr>
+    <tr>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		  R:<br>
+		  G:<br>
+          B:<br>
+          HEX:#
+		</td>
+      <td>
+		  R:<br>
+	      G:<br>
+ 	      B:<br>
+	      HEX:#
+      </td>
+        <td>
+		R:<br>
+	    G:<br>
+	    B:<br>
+		HEX:#
+		</td>
+        <td>
+		R:<br>
+	    G:<br>
+		B:<br>
+	    HEX:#
+		</td>
+    </tr>
+  </tbody>
+        </table>
+<p>Option #2:</p>
+<table width="600" height="90" border="1">
+      <tbody>
+      <tr align="center">
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      </tr>
+      <tr>
+      <td>
+	     R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+	    R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+	    R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+	    R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        </tr>
+  </tbody>
+</table>
+<p>Option #3:</p>
+<table width="600" height="90" border="1">
+  <tbody>
+    <tr align="center">
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+    </tr>
+    <tr>
+      <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+	  </td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+      <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+	  </td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+    </tr>
+  </tbody>
+</table>
+<p>Option #4:</p>
+<table width="600" height="90" border="1">
+    <tbody>
+    <tr align="center">
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      <td width="98" height="60"></td>
+      </tr>
+        <tr>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#</td>
+        <td>
+	    R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#
+		</td>
+        <td>
+		R:<br>
+        G:<br>
+        B:<br>
+        HEX:#</td>
+        </tr>
+  </tbody>
+</table>
+<p><br>
+Go to Part A_colors folder and open colors_template.indt</p>
+</body>
+</html>
