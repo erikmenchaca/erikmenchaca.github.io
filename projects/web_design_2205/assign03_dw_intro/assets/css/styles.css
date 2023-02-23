@@ -4,4 +4,6 @@ body{
 	background-color: beige;
 	font-family: Arial;
 }
-
+header {
+	text-align: center;
+}
