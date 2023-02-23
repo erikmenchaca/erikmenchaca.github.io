@@ -1,9 +1,19 @@
 @charset "UTF-8";
 
 body{
-	background-color: beige;
+	background-color: lightslategray;
 	font-family: Arial;
 }
 header {
 	text-align: center;
+}
+.center {
+	text-align: center;
+}
+table, tr, td {
+	border: 5px solid black;
+	border-collapse: collapse;
+	padding: 15px;
+	text-align: center;
+	
 }
