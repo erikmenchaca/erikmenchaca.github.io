@@ -11,15 +11,14 @@
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 <script type="text/javascript">
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
-
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
 function MM_findObj(n, d) { //v4.01
   var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
     d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
@@ -35,7 +34,7 @@ function MM_swapImage() { //v3.0
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('../assets/flowers_rollover.gif')">
+<body onLoad="MM_preloadImages('../assets/travels_rollover.gif','../assets/flowers_rollover.gif','../assets/gallery_rollover.gif','../assets/foods_rollover.gif')">
 	
 <table width="800" border="1" align="center">
   <tbody>
@@ -46,9 +45,9 @@ function MM_swapImage() { //v3.0
     </tr>
     <tr>
       <td width="200" height="50" align="center"><a href="../flowers.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Flowers','','../assets/flowers_rollover.gif',1)"><img src="../assets/flowers_original.gif" alt="Flowers" width="200" height="50" id="Flowers"></a></td>
-      <td width="200" height="50" align="center"><a href="../travels.html">Travels</a></td>
-      <td width="200" height="50" align="center"><p><a href="../gallery.html">Gallery</a></p></td>
-      <td width="200" height="50" align="center"><a href="../foods.html">Foods</a></td>
+      <td width="200" height="50" align="center"><a href="../travels.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Travels','','../assets/travels_rollover.gif',1)"><img src="../assets/travels_original.gif" alt="Travels" width="200" height="50" id="Travels"></a></td>
+      <td width="200" height="50" align="center"><a href="../gallery.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Gallery','','../assets/gallery_rollover.gif',1)"><img src="../assets/gallery_original.gif" alt="Gallery" width="200" height="50" id="Gallery"></a></td>
+      <td width="200" height="50" align="center"><a href="../foods.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Foods','','../assets/foods_rollover.gif',1)"><img src="../assets/foods_original.gif" alt="Foods" width="200" height="50" id="Foods"></a></td>
     </tr>
     <tr>
       <td width="800" height="600" colspan="4" align="center">
