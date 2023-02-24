@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Template for Midterm</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<table width="800" border="1">
+  <tbody>
+    <tr>
+      <td class="cell-size" colspan="2">&nbsp;</td>
+      <td class="cell-size" colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="rollover-size">&nbsp;</td>
+      <td class="rollover-size">&nbsp;</td>
+      <td class="rollover-size">&nbsp;</td>
+      <td class="rollover-size">&nbsp;</td>
+    </tr>
+    <!-- TemplateBeginEditable name="Content Area" -->
+    <tr>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+      <td class="photo-size">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-size" colspan="2">&nbsp;</td>
+      <td class="cell-size" colspan="2">&nbsp;</td>
+    </tr>
+    <!-- TemplateEndEditable -->
+    <tr>
+      <td class="hypertext-size" colspan="4">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

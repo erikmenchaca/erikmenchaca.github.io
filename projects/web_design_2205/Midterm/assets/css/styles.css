@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.cell-size {
+	width: 400px;
+	height: 200px;
+}
+.rollover-size {
+	width: 200px;
+	height: 50px;
+}
+.photo-size {
+	width: 200px;
+	height: 200px;
+}
+.hypertext-size {
+	width: 800px;
+	height: 60px;
+}
+.index-size {
+	width: 800px;
+	height: 600px;
+}
+.gallery-size {
+	width: 800px;
+	height: 600px;
+}
