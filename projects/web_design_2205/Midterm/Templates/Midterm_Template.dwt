@@ -13,8 +13,13 @@
 	<table width="800" border="1" cellpadding="5">
   <tbody>
     <tr>
+<<<<<<< HEAD
       <td colspan="2" width="400" height="200"><a href="../index.html" target="_blank"><img src="../assets/media/Midterm_Logo.png" width="400" height="200" alt="Logo" title="Logo"/></a></td>
       <td colspan="2" width="400" height="200"><img src="../assets/media/Midterm_Banner.png" width="400" height="200" alt=""/></td>
+=======
+      <td colspan="2" width="400" height="200"> <img src="../assets/media/Midterm_Logo.png" width="400" height="200" alt=""/></td>
+      <td colspan="2" width="400" height="200"></td>
+>>>>>>> 3971f717166f165ee0abd8228b95219bc502adaf
     </tr>
     <tr>
       <td width="200" height="50"></td>
