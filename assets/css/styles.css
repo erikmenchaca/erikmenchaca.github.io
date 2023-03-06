@@ -18,9 +18,11 @@ header {
 <<<<<<< Updated upstream
 	margin-right: 3in;
 }
-.erik {
-	margin-right: 2em;
+.profile-info {
+text-align: right;
+float: right;
 }
+
 
 table, td, tr, th{
     border: 2px solid black;
