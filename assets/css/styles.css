@@ -2,15 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
 	font-family: 'Lato', sans-serif;
+<<<<<<< Updated upstream
 	font-size: 16pt;
 	padding: 20px;
 }
 
+=======
+}
+>>>>>>> Stashed changes
 header {
 	text-align: center;
 }
 
 .aboutme {
+<<<<<<< Updated upstream
 	margin-right: 3in;
 }
 .profile-info {
@@ -25,3 +30,8 @@ table, td, tr, th{
 	padding: 10px;
 	
 }
+=======
+	margin-right: 1in;
+	display: block;
+}
+>>>>>>> Stashed changes
