@@ -42,7 +42,15 @@ img {
 
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
-	/* Your tablet styles go here */
+	.profile {
+		float: right;
+	}
+	.wrapper {
+		max-width: 100%;
+		clear: both;
+	}
+	
+	
 }
 
 /* Desktop styles */
