@@ -44,10 +44,24 @@ img {
 @media (min-width: 769px) and (max-width: 1024px) {
 	.profile {
 		float: right;
+		padding: 20px;
+		text-align: right;
+
+	}
+	.profile img {
+		border-radius: 100%;
 	}
 	.wrapper {
 		max-width: 100%;
-		clear: both;
+		
+	}
+	.mainbody {
+		
+		padding: 20px;;
+		border: 2px black solid;
+	}
+	header {
+		text-align: center;
 	}
 	
 	
