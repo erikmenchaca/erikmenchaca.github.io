@@ -57,18 +57,55 @@ img {
 	}
 	.mainbody {
 		
-		padding: 20px;;
+		padding: 2px;
 		
 	}
 	header {
 		text-align: center;
 	}
-	
+	table, tr, th, td {
+		border: 2px solid black;
+		border-collapse: collapse;
+		padding: 20px;
+		width: 600px;
+	}
+	th {
+		width: 100px;
+	}
 	
 }
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-	/* Your desktop styles go here */
+	header {
+		text-align: center;
+		
+	}
+	.profile {
+		float: left;
+		max-width: 100%;
+	}
+	.profile img {
+		border-radius: 100%;
+	}
+	.mainbody {
+		padding: 2px;
+		margin-left: 325px;
+	}
+	.wrapper {
+		max-width: 100%;
+
+	}
+	table, tr, th, td {
+		border: 2px solid black;
+		border-collapse: collapse;
+		padding: 20px;
+		width: 600px;
+
+	}
+	th {
+		width: 100px;
+	}
+
 }
 
