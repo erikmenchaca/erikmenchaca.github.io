@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .wrapper {
 	max-width: 100%;
 }
@@ -9,40 +10,52 @@ body {
 	padding: 10px;
 	background: lightblue;
 }
+
 img {
 	max-width: 100%;
-	
-	
+
+
 }
+
 .stacy {
 	width: 100px;
 }
+
 /* Mobile styles */
 @media (max-width: 768px) {
 	header {
 		text-align: center;
 	}
+
 	.profile {
 		text-align: center;
 	}
+
 	.profile img {
 		border-radius: 100%;
 	}
+
 	.aboutme {
 		text-indent: 2rem;
 	}
-	.mainbody > h2 {
+
+	.mainbody>h2 {
 		text-align: center;
 	}
-	table, tr, th, td {
+
+	table,
+	tr,
+	th,
+	td {
 		border: 2px solid black;
 		border-collapse: collapse;
 		padding: 20px;
 		max-width: 100%;
 	}
-.stacy {
-	width: 200px;
-}
+
+	.stacy {
+		width: 200px;
+	}
 }
 
 /* Tablet styles */
@@ -53,22 +66,30 @@ img {
 		text-align: right;
 
 	}
+
 	.profile img {
 		border-radius: 100%;
 	}
+
 	.wrapper {
 		max-width: 100%;
-		
+
 	}
+
 	.mainbody {
-		
+
 		padding: 2px;
-		
+
 	}
+
 	header {
 		text-align: center;
 	}
-	table, tr, th, td {
+
+	table,
+	tr,
+	th,
+	td {
 		border: 2px solid black;
 		border-collapse: collapse;
 		padding: 20px;
@@ -84,34 +105,42 @@ img {
 @media (min-width: 1025px) {
 	header {
 		text-align: center;
-		
+
 	}
+
 	.profile {
 		float: left;
 		max-width: 100%;
 	}
+
 	.profile img {
 		border-radius: 100%;
 	}
+
 	.mainbody {
 		padding: 2px;
 		margin-left: 325px;
 	}
+
 	.wrapper {
 		max-width: 100%;
 
 	}
-	table, tr, th, td {
+
+	table,
+	tr,
+	th,
+	td {
 		border: 2px solid black;
 		border-collapse: collapse;
 		padding: 20px;
 		width: 700px;
 
 	}
+
 	.stacy {
 		width: 200px;
 	}
-	
+
 
 }
-
