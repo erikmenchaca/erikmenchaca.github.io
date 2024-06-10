@@ -17,10 +17,6 @@ img {
 
 }
 
-.stacy {
-    width: 100px;
-}
-
 /* Mobile styles */
 @media (max-width: 768px) {
     header {
@@ -51,10 +47,6 @@ img {
         border-collapse: collapse;
         padding: 20px;
         max-width: 100%;
-    }
-
-    .stacy {
-        width: 200px;
     }
 }
 
@@ -95,10 +87,6 @@ img {
         padding: 20px;
         width: 600px;
     }
-
-    .stacy {
-        width: 200px;
-    }
 }
 
 /* Desktop styles */
@@ -136,10 +124,6 @@ img {
         padding: 20px;
         width: 700px;
 
-    }
-
-    .stacy {
-        width: 200px;
     }
 
 
