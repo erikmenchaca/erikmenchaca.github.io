@@ -1,130 +1,130 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.wrapper {
-    max-width: 100%;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
 }
-
 body {
-    font-family: Lato, sans-serif;
-    padding: 10px;
-    background-color: peachpuff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe5cc;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
-
-img {
-    max-width: 100%;
-
-
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
 }
-
-/* Mobile styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+header h1 {
+    font-size: 2.5rem;
+}
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.toggle-button:hover {
+    background-color: #555;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+.profile {
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 300px;
+    animation: fadeIn 2s;
+}
+.profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+.contact p {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+.contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+}
+.mainbody {
+    flex: 2 1 500px;
+}
+.mainbody p.aboutme {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+h2, h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #222;
+}
+body.dark-mode h2, body.dark-mode h3 {
+    color: #ddd;
+}
+dl, ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+ul li a:hover {
+    color: #ff6600;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #555;
+}
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
 @media (max-width: 768px) {
-    header {
-        text-align: center;
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .profile {
-        text-align: center;
-    }
-
-    .profile img {
-        border-radius: 100%;
-    }
-
-    .aboutme {
-        text-indent: 2rem;
-    }
-
-    .mainbody > h2 {
-        text-align: center;
-    }
-
-    table,
-    tr,
-    th,
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
-        padding: 20px;
-        max-width: 100%;
+    .mainbody, .profile {
+        max-width: 90%;
     }
 }
-
-/* Tablet styles */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .profile {
-        float: right;
-        padding: 20px;
-        text-align: right;
-
-    }
-
-    .profile img {
-        border-radius: 100%;
-    }
-
-    .wrapper {
-        max-width: 100%;
-
-    }
-
-    .mainbody {
-
-        padding: 2px;
-
-    }
-
-    header {
-        text-align: center;
-    }
-
-    table,
-    tr,
-    th,
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
-        padding: 20px;
-        width: 600px;
-    }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInItem 1s forwards;
 }
 
-/* Desktop styles */
-@media (min-width: 1025px) {
-    header {
-        text-align: center;
-
+@keyframes fadeInItem {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .profile {
-        float: left;
-        max-width: 100%;
-    }
-
-    .profile img {
-        border-radius: 100%;
-    }
-
-    .mainbody {
-        padding: 2px;
-        margin-left: 325px;
-    }
-
-    .wrapper {
-        max-width: 100%;
-
-    }
-
-    table,
-    tr,
-    th,
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
-        padding: 20px;
-        width: 700px;
-
-    }
-
-
 }
