@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const accessibilityToggle = document.getElementById('accessibilityToggle');
     const accessibilityPanel = document.getElementById('accessibilityPanel');
     const darkModeButton = document.getElementById('darkModeToggle');
+    const resetButton = document.getElementById('resetSettings');
   
     function applyFontSize() {
       document.body.style.fontSize = currentFontSize + 'px';
@@ -86,12 +87,42 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   
+    function resetAccessibilitySettings() {
+      // Reset Dark Mode
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+      updateDarkModeButtonText();
+  
+      // Reset Font Size
+      currentFontSize = 16;
+      applyFontSize();
+      localStorage.setItem('fontSize', currentFontSize);
+  
+      // Close the panel
+      closeAccessibilityPanel();
+  
+      // Show toast
+      showToast('Accessibility settings reset successfully!');
+    }
+  
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      if (toast) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      }
+    }
+  
     function setupAccessibilityFeatures() {
       document.getElementById('increaseText').addEventListener('click', increaseTextSize);
       document.getElementById('decreaseText').addEventListener('click', decreaseTextSize);
       darkModeButton.addEventListener('click', toggleDarkMode);
       accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
       document.getElementById('closePanel').addEventListener('click', closeAccessibilityPanel);
+      resetButton.addEventListener('click', resetAccessibilitySettings);
       window.addEventListener('click', closeAccessibilityPanelOnOutsideClick);
     }
   
