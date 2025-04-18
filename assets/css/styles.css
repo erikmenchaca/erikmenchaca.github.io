@@ -74,6 +74,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;  /* ✅ fix to the screen */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 .accessibility-menu button:hover {
     background-color: #555;
