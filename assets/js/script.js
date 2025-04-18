@@ -1,51 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // ===== Set Current Year =====
+document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('year');
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
   
-    // ===== Load Courses from JSON =====
-    function addCourseToList() {
-      fetch('assets/json/courses.json')
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error('Failed to fetch courses');
-          }
-          return response.json();
-        })
-        .then(function (courses) {
-          const coursesList = document.getElementById('courses-list');
-          if (coursesList) {
-            courses.forEach(function (course, index) {
-              const li = document.createElement('li');
-              li.textContent = course;
-              li.classList.add('fade-in');
-              li.style.animationDelay = (index * 0.2) + 's';
-              coursesList.appendChild(li);
-            });
-          }
-        })
-        .catch(function (error) {
-          console.error('Error loading courses:', error);
-        });
-    }
-    addCourseToList();
-  
-    // ===== Accessibility Settings =====
     let currentFontSize = parseInt(localStorage.getItem('fontSize')) || 16;
     const accessibilityToggle = document.getElementById('accessibilityToggle');
     const accessibilityPanel = document.getElementById('accessibilityPanel');
     const darkModeButton = document.getElementById('darkModeToggle');
     const resetButton = document.getElementById('resetSettings');
-    const accessibilityButton = document.getElementById('accessibilityToggle');
+    const closePanelButton = document.getElementById('closePanel');
+    const toast = document.getElementById('toast');
   
     function applyFontSize() {
-      document.body.style.fontSize = currentFontSize + 'px';
+      document.body.style.fontSize = `${currentFontSize}px`;
     }
-  
+    
     function increaseTextSize() {
-      if (currentFontSize < 24) {
+      const maxFont = window.innerWidth < 768 ? 30 : 48;
+      if (currentFontSize < maxFont) {
         currentFontSize += 2;
         applyFontSize();
         localStorage.setItem('fontSize', currentFontSize);
@@ -53,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     function decreaseTextSize() {
-      if (currentFontSize > 12) {
+      if (currentFontSize > 14) {
         currentFontSize -= 2;
         applyFontSize();
         localStorage.setItem('fontSize', currentFontSize);
@@ -61,100 +34,95 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     function updateDarkModeButtonText() {
-      if (document.body.classList.contains('dark-mode')) {
-        darkModeButton.textContent = 'Switch to Light Mode';
-      } else {
-        darkModeButton.textContent = 'Switch to Dark Mode';
-      }
+      darkModeButton.textContent = document.body.classList.contains('dark-mode')
+        ? 'Switch to Light Mode'
+        : 'Switch to Dark Mode';
     }
   
     function toggleDarkMode() {
+        document.body.classList.add('no-transition');
       document.body.classList.toggle('dark-mode');
       localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
       updateDarkModeButtonText();
+      setTimeout(() => {
+        document.body.classList.remove('no-transition'); // <-- REMOVE after 50ms
+      }, 50);
     }
   
     function toggleAccessibilityPanel() {
-      accessibilityPanel.classList.toggle('active');
+        if (accessibilityPanel.classList.contains('active')) {
+          // Panel is open ➔ Close it
+          accessibilityPanel.classList.remove('active');
+          accessibilityPanel.classList.add('hidden');
+          accessibilityToggle.style.display = 'flex'; // Show button again
+        } else {
+          // Panel is closed ➔ Open it
+          accessibilityPanel.classList.add('active');
+          accessibilityPanel.classList.remove('hidden');
+          accessibilityToggle.style.display = 'none'; // Hide button
+        }
+      }
   
-      if (accessibilityPanel.classList.contains('active')) {
-        accessibilityPanel.classList.remove('hidden');
-        accessibilityButton.style.display = 'none'; // Hide floating button
-      } else {
+      function closeAccessibilityPanel() {
+        accessibilityPanel.classList.remove('active');
         accessibilityPanel.classList.add('hidden');
-        accessibilityButton.style.display = 'inline-flex'; // Show floating button
+        accessibilityToggle.style.display = 'flex'; // Show button again
       }
-    }
-  
-    function closeAccessibilityPanel() {
-      accessibilityPanel.classList.remove('active');
-      accessibilityPanel.classList.add('hidden');
-      accessibilityButton.style.display = 'inline-flex'; // Restore floating button
-    }
-  
-    function closeAccessibilityPanelOnOutsideClick(event) {
-      if (!accessibilityToggle.contains(event.target) && !accessibilityPanel.contains(event.target)) {
-        closeAccessibilityPanel();
-      }
-    }
+      
   
     function resetAccessibilitySettings() {
-      // Reset Dark Mode
       document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
-      updateDarkModeButtonText();
-  
-      // Reset Font Size
       currentFontSize = 16;
       applyFontSize();
       localStorage.setItem('fontSize', currentFontSize);
-  
-      // Force Repaint of Text Colors
-      document.querySelectorAll('h1, h2, h3, p, a, li, dd, dt').forEach(function (element) {
-        element.style.color = '';
-      });
-  
-      // Close the panel
       closeAccessibilityPanel();
-  
-      // Show toast
       showToast('Accessibility settings reset successfully!');
     }
   
     function showToast(message) {
-      const toast = document.getElementById('toast');
-      if (toast) {
-        toast.textContent = message;
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, 3000);
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  
+    function addCourseToList() {
+        fetch('assets/json/courses.json')
+          .then(response => response.json())
+          .then(data => {
+            const coursesList = document.getElementById('courses-list');
+            if (coursesList) {
+              data.courses.forEach((course, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<b>${course}</b><br><small>${data.descriptions[index] || ''}</small>`;
+                coursesList.appendChild(li);
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Error loading courses:', error);
+          });
       }
-    }
   
-    function setupAccessibilityFeatures() {
-      document.getElementById('increaseText').addEventListener('click', increaseTextSize);
-      document.getElementById('decreaseText').addEventListener('click', decreaseTextSize);
-      darkModeButton.addEventListener('click', toggleDarkMode);
-      accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
-      document.getElementById('closePanel').addEventListener('click', closeAccessibilityPanel);
-      resetButton.addEventListener('click', resetAccessibilitySettings);
-      window.addEventListener('click', closeAccessibilityPanelOnOutsideClick);
-  
-      // New: Allow closing panel with ESC key
-      window.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && accessibilityPanel.classList.contains('active')) {
-          closeAccessibilityPanel();
-        }
-      });
-    }
-  
-    // ===== Initialize on Page Load =====
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark-mode');
     }
     updateDarkModeButtonText();
     applyFontSize();
-    setupAccessibilityFeatures();
+  
+    document.getElementById('increaseText').addEventListener('click', increaseTextSize);
+    document.getElementById('decreaseText').addEventListener('click', decreaseTextSize);
+    darkModeButton.addEventListener('click', toggleDarkMode);
+    accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
+    closePanelButton.addEventListener('click', closeAccessibilityPanel);
+    resetButton.addEventListener('click', resetAccessibilitySettings);
+  
+    // CALL THIS
+    addCourseToList();
+
+
   });
   
