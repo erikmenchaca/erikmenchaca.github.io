@@ -74,9 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     function toggleAccessibilityPanel() {
-      accessibilityPanel.classList.toggle('active');
-    }
-  
+        accessibilityPanel.classList.toggle('active');
+      
+        const accessibilityButton = document.getElementById('accessibilityToggle');
+      
+        if (accessibilityPanel.classList.contains('active')) {
+          accessibilityPanel.classList.remove('hidden');
+          accessibilityButton.style.display = 'none'; // Hide floating button
+        } else {
+          accessibilityPanel.classList.add('hidden');
+          accessibilityButton.style.display = 'inline-flex'; // Show it again
+        }
+      }
+      
+      
     function closeAccessibilityPanel() {
       accessibilityPanel.classList.remove('active');
     }
