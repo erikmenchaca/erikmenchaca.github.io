@@ -199,6 +199,7 @@ footer p {
     transition: right 0.4s ease, opacity 0.4s ease;
     z-index: 999;
 }
+
 .accessibility-panel.active {
     right: 0;
 }

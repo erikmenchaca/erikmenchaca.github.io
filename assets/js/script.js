@@ -1,4 +1,4 @@
-<script>
+
 // ===== Set Current Year =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -110,4 +110,4 @@ applyFontSize();
 // Setup accessibility buttons
 setupAccessibilityFeatures();
 
-</script>
+
