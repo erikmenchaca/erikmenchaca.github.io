@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,59 +9,83 @@
     <link rel="icon" type="image/x-icon" href="assets/media/favicon.ico">
 
 </head>
+
 <body>
-<header>
-    <h1>Erik Menchaca</h1>
-    <button class="toggle-button" id="darkModeToggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
-</header>
-<main>
-    <div class="wrapper">
-        <div class="profile">
-            <img src="assets/media/erik.png" alt="Portrait of Erik Menchaca">
-            <div class="contact">
-                <p><b>Email:</b> <a href="mailto:Erik.Menchaca@mail.rit.edu">Erik.Menchaca@mail.rit.edu</a></p>
-                <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank">Erik Menchaca</a></p>
-                <p><b>GitHub:</b> <a href="https://github.com/erikmenchaca" target="_blank">Erik Menchaca</a></p>
+    <header>
+        <h1>Erik Menchaca</h1>
+
+        <div class="accessibility-menu">
+            <button id="accessibilityToggle" aria-label="Accessibility Options">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path
+                        d="M12 2a2 2 0 100 4 2 2 0 000-4zm5 7h-3v3.17l4.41 4.42a1 1 0 01-1.41 1.41L13 13.41V20a1 1 0 11-2 0v-8.59l-2.3 2.29a1 1 0 01-1.4-1.42l3.59-3.58V9H7a1 1 0 110-2h10a1 1 0 110 2z" />
+                </svg>
+            </button>
+            <div id="accessibilityPanel" class="accessibility-panel hidden">
+                <button id="closePanel" aria-label="Close Accessibility Settings">❌</button>
+                <h2>Accessibility Settings</h2>
+                <button id="increaseText">Increase Text Size</button>
+                <button id="decreaseText">Decrease Text Size</button>
+                <button id="darkModeToggle">Toggle Dark/Light Mode</button>
+              </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="profile">
+                <img src="assets/media/erik.png" alt="Portrait of Erik Menchaca">
+                <div class="contact">
+                    <p><b>Email:</b> <a href="mailto:Erik.Menchaca@mail.rit.edu">Erik.Menchaca@mail.rit.edu</a></p>
+                    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank">Erik
+                            Menchaca</a></p>
+                    <p><b>GitHub:</b> <a href="https://github.com/erikmenchaca" target="_blank">Erik Menchaca</a></p>
+                </div>
+            </div>
+            <div class="mainbody">
+                <p class="aboutme">
+                    Hello! My name is Erik Menchaca. I have created this website for my professional portfolio in hope
+                    to find a co-op, internship, or a full-time job. I enjoy my academic career, studying Applied
+                    Computer Technology with an emphasis on Human-Computer Interaction and Psychology.
+                </p>
+                <h2>Experience</h2>
+                <dl>
+                    <dt><b>Rochester Institute of Technology/National Technical Institute of the Deaf, Fall Semester
+                            2021</b></dt>
+                    <dd>I collaborated with an NTID Visual Communication Studies faculty, a senior lecturer, with the
+                        consultation of the Web Design course for students pursuing their Associate's Degree.
+                        <ul>
+                            <li>Made several Zoom recording demonstrations for all course assignments</li>
+                            <li>Wrote assignment grading rubrics</li>
+                            <li>Tutored students taking her course during the semester</li>
+                            <li>Lectured several presentations/instructions</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <h2>Education</h2>
+                <dl>
+                    <dt><b>Rochester Institute of Technology</b></dt>
+                    <dd>Associate of Applied Science in Mobile Application Development, August 2021 - present</dd>
+                    <dt><b>Georgia Piedmont Technical College</b></dt>
+                    <dd>TCC earned with 3.85 GPA, PC Repair & Network Technician, August 2019 - May 2020</dd>
+                </dl>
+                <h3>Courses Taken</h3>
+                <ul id="courses-list">
+
+                </ul>
+                <h2>Previous Project(s)</h2>
+                <p><b>FW: Writing Seminar — Spring Semester 2025</b></p>
+                <ul>
+                    <li><a href="projects/writing_seminar_2225/Menchaca_UWRT150_Final.pdf" target="_blank">Final APA
+                            Paper</a></li>
+                </ul>
             </div>
         </div>
-        <div class="mainbody">
-            <p class="aboutme">
-                Hello! My name is Erik Menchaca. I have created this website for my professional portfolio in hope to find a co-op, internship, or a full-time job. I enjoy my academic career, studying Applied Computer Technology with an emphasis on Human-Computer Interaction and Psychology.
-            </p>
-            <h2>Experience</h2>
-            <dl>
-                <dt><b>Rochester Institute of Technology/National Technical Institute of the Deaf, Fall Semester 2021</b></dt>
-                <dd>I collaborated with an NTID Visual Communication Studies faculty, a senior lecturer, with the consultation of the Web Design course for students pursuing their Associate's Degree.
-                    <ul>
-                        <li>Made several Zoom recording demonstrations for all course assignments</li>
-                        <li>Wrote assignment grading rubrics</li>
-                        <li>Tutored students taking her course during the semester</li>
-                        <li>Lectured several presentations/instructions</li>
-                    </ul>
-                </dd>
-            </dl>
-            <h2>Education</h2>
-            <dl>
-                <dt><b>Rochester Institute of Technology</b></dt>
-                <dd>Associate of Applied Science in Mobile Application Development, August 2021 - present</dd>
-                <dt><b>Georgia Piedmont Technical College</b></dt>
-                <dd>TCC earned with 3.85 GPA, PC Repair & Network Technician, August 2019 - May 2020</dd>
-            </dl>
-            <h3>Courses Taken</h3>
-            <ul id="courses-list">
-
-            </ul>
-            <h2>Previous Project(s)</h2>
-            <p><b>FW: Writing Seminar — Spring Semester 2025</b></p>
-            <ul>
-                <li><a href="projects/writing_seminar_2225/Menchaca_UWRT150_Final.pdf" target="_blank">Final APA Paper</a></li>
-            </ul>
-        </div>
-    </div>
-</main>
-<footer>
-    <p>© <span id="year"></span> Erik Menchaca | All Rights Reserved</p>
-</footer>
-<script src="assets/js/script.js"></script>
+    </main>
+    <footer>
+        <p>© <span id="year"></span> Erik Menchaca | All Rights Reserved</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
