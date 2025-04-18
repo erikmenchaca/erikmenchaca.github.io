@@ -172,15 +172,23 @@ footer p {
 }
 
 /* === Accessibility Menu === */
-.accessibility-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+.accessibility-menu button {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    display: flex; /* NEW */
+    justify-content: center; /* NEW */
+    align-items: center; /* NEW */
 }
+
 .accessibility-menu button svg {
     width: 28px;
     height: 28px;
+    display: block; /* NEW */
+    margin: auto; /* NEW */
 }
 
 /* === Accessibility Panel (Slide Panel) === */
@@ -244,7 +252,19 @@ footer p {
     0% {opacity: 0; transform: translateY(-20px);}
     100% {opacity: 1; transform: translateY(0);}
 }
-
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Target the floating button hover */
+  .accessibility-menu button:hover {
+      animation: bounce 0.5s;
+  }
 /* === Responsive Adjustments === */
 @media (max-width: 768px) {
     .wrapper {
