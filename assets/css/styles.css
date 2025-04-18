@@ -16,14 +16,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /* Prevents horizontal scroll when panel opens */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 body.dark-mode {
     background-color: #1e1e1e;
     color: #f5f5f5;
 }
 
-/* === Headers === */
+/* === Header === */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -57,6 +57,13 @@ button:hover {
     background-color: #555;
 }
 
+/* === Accessibility Menu Button === */
+.accessibility-menu {
+    position: fixed; /* <-- FIXED instead of absolute */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
 .accessibility-menu button {
     background-color: #333;
     color: #fff;
@@ -64,12 +71,21 @@ button:hover {
     width: 45px;
     height: 45px;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .accessibility-menu button:hover {
     background-color: #555;
 }
+.accessibility-menu button svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin: auto;
+}
 
-/* === Close Button === */
+/* === Close Button for Panel === */
 #closePanel {
     background: none;
     color: #333;
@@ -87,13 +103,11 @@ body.dark-mode h3,
 body.dark-mode #closePanel {
     color: #f5f5f5;
 }
-
 body.dark-mode .accessibility-panel,
 body.dark-mode .accessibility-options {
     background-color: #1e1e1e;
     border-color: #555;
 }
-
 body.dark-mode .accessibility-panel button,
 body.dark-mode .accessibility-options button {
     background-color: #f5f5f5;
@@ -171,26 +185,6 @@ footer p {
     margin-top: 20px;
 }
 
-/* === Accessibility Menu === */
-.accessibility-menu button {
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 1.5rem;
-    display: flex; /* NEW */
-    justify-content: center; /* NEW */
-    align-items: center; /* NEW */
-}
-
-.accessibility-menu button svg {
-    width: 28px;
-    height: 28px;
-    display: block; /* NEW */
-    margin: auto; /* NEW */
-}
-
 /* === Accessibility Panel (Slide Panel) === */
 .accessibility-panel {
     position: fixed;
@@ -207,9 +201,11 @@ footer p {
     gap: 15px;
     transition: right 0.4s ease, opacity 0.4s ease;
     z-index: 999;
+    opacity: 0;
 }
 .accessibility-panel.active {
     right: 0;
+    opacity: 1;
 }
 .accessibility-panel h2 {
     margin-bottom: 20px;
@@ -249,22 +245,10 @@ footer p {
 
 /* === Animations === */
 @keyframes fadeIn {
-    0% {opacity: 0; transform: translateY(-20px);}
-    100% {opacity: 1; transform: translateY(0);}
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
-@keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-  
-  /* Target the floating button hover */
-  .accessibility-menu button:hover {
-      animation: bounce 0.5s;
-  }
+
 /* === Responsive Adjustments === */
 @media (max-width: 768px) {
     .wrapper {
