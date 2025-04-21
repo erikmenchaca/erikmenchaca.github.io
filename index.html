@@ -1,81 +1,112 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <title>My Website - Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/media/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erik Menchaca - Portfolio</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/media/favicon.ico">
 </head>
 
 <body>
-<header>
+  <header>
+    <nav style="background-color: #333; padding: 10px;">
+      <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden;">
+        <li style="float: left; margin-right: 20px;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+        <li style="float: left; margin-right: 20px;"><a href="#experience" style="color: white; text-decoration: none;">Experience</a></li>
+        <li style="float: left; margin-right: 20px;"><a href="#education" style="color: white; text-decoration: none;">Education</a></li>
+        <li style="float: left; margin-right: 20px;"><a href="#courses" style="color: white; text-decoration: none;">Courses</a></li>
+      </ul>
+    </nav>
     <h1>Erik Menchaca</h1>
-</header>
-<main>
+
+   <!-- Accessibility Button -->
+<div class="accessibility-menu">
+    <button id="accessibilityToggle" aria-label="Accessibility Options">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2a2 2 0 100 4 2 2 0 000-4zm5 7h-3v3.17l4.41 4.42a1 1 0 01-1.41 1.41L13 13.41V20a1 1 0 11-2 0v-8.59l-2.3 2.29a1 1 0 01-1.4-1.42l3.59-3.58V9H7a1 1 0 110-2h10a1 1 0 110 2z"/>
+      </svg>
+    </button>
+  </div>
+  
+<!-- Accessibility Panel -->
+<div id="accessibilityPanel" class="accessibility-panel hidden">
+    <button id="closePanel" aria-label="Close Accessibility Settings">❌</button>
+    <h2>Accessibility Settings</h2>
+    <button id="increaseText">Increase Text Size</button>
+    <button id="decreaseText">Decrease Text Size</button>
+    <button id="darkModeToggle">Switch to Dark Mode</button>
+    <button id="resetSettings">Reset Accessibility Settings</button>
+  </div>
+  
+  <!-- Toast -->
+  <div id="toast" class="toast hidden">Settings reset successfully!</div>
+  
+  
+
+  <main>
     <div class="wrapper">
-        <div class="profile">
-            <img src="assets/media/erik.png" alt="Erik" title="Erik" width="300"/>
-            <div class="contact">
-                <p><b>Email:</b> <a href="mailto:Erik.Menchaca@mail.rit.edu"
-                                    target="_blank">Erik.Menchaca@mail.rit.edu</a></p>
-                <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank">Erik
-                    Menchaca</a></p>
-                <p><b>Github:</b> <a href="https://github.com/erikmenchaca" target="_blank">Erik Menchaca</a></p>
-            </div>
+      <div class="profile">
+        <img src="assets/media/erik.png" alt="Portrait of Erik Menchaca">
+        <div class="contact">
+          <p><b>Email:</b> <a href="mailto:Erik@mail.rit.edu">Erik@mail.rit.edu</a></p>
+          <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank">Erik Menchaca</a></p>
+          <p><b>GitHub:</b> <a href="https://github.com/erikmenchaca" target="_blank">Erik Menchaca</a></p>
         </div>
-        <div class="mainbody">
-            <p class="aboutme"> Hello! My name is Erik Menchaca. I have created this website for my professional
-                portfolio in
-                hope to
-                find a co-op, internship, or a full-time job. I enjoy my academic career, studying Mobile
-                Application Development
-                with an emphasis of User Experience and User Interface Design.</p>
-            <h2>Experience</h2>
-            <dt>Rochester Institute of Technology/National Technical Institute of the Deaf, Fall Semester 2021</dt>
-            <dd>I collaborated with an NTID Visual Communication Studies faculty, a senior lecturer, with the
-                consultation of the Web Design course for students who are pursuing their Associate's Degree.
-            </dd>
-            <ul>
-                <li>Made several Zoom recording demonstrations for all course assignments</li>
-                <li>Wrote assignment grading rubrics</li>
-                <li>Tutored with students who are taking her course during the semester</li>
-                <li>Lectured several presentation/instructions</li>
-            </ul>
-            <h2>Education</h2>
-            <dt>Rochester Institute of Technology</dt>
-            <dd>Associate of Applied Science in Mobile Application Development, August 2021- present</dd>
-            <dt>Georgia Piedmont Technical College, August 2019- May 2020</dt>
-            <dd>TCC earned with 3.85 GPA, PC Repair &amp; Network Technician</dd>
-            <h3>Courses Taken</h3>
-            <ul>
-                <li>Introduction to Programming</li>
-                <li>Survey of Visual Design</li>
-                <li>Programming Fundamentals I: Mobile Domain</li>
-                <li>Problem Analysis and Software Development I</li>
-                <li>Web Design I</li>
-                <li>Web and Mobile I</li>
-                <li>Web and Mobile II</li>
+      </div>
+      
+      <div class="mainbody">
+        <p class="aboutme">
+          Hello! My name is Erik Menchaca. I have created this website for my professional portfolio in hopes
+          of finding a co-op, internship, or full-time job. I enjoy my academic career, studying Applied
+          Computer Technology with an emphasis on Human-Computer Interaction and Psychology.
+        </p>
 
-            </ul>
-            <h2>Previous Projects</h2>
-            <p>Web Design &mdash; Spring Semester 2205</p>
+        <h2>Experience</h2>
+        <dl>
+          <p><b>Rochester Institute of Technology/National Technical Institute of the Deaf, Fall Semester 2021</b></p>
+          <p>
+            I collaborated with an NTID Visual Communication Studies faculty, a senior lecturer, with the
+            consultation of the Web Design course for students pursuing their Associate's Degree.</p>
             <ul>
-                <li><a href="projects/web_design_2205/Midterm/index.html">Midterm</a></li>
-                <li><a href="https://erik-menchaca.wixsite.com/erikm">Final Exam</a></li>
+              <li>Made several Zoom recording demonstrations for all course assignments</li>
+              <li>Wrote assignment grading rubrics</li>
+              <li>Tutored students taking her course during the semester</li>
+              <li>Lectured several presentations/instructions</li>
             </ul>
-            <p>FW: Writing Seminar &mdash; Spring Semester 2225</p>
-            <ul>
-                <li><a href="projects/writing_seminar_2225/Menchaca_UWRT150_Final.pdf">Final APA Paper</a>
-                </li>
-            </ul>
+          </dd>
+        </dl>
 
-        </div>
+        <h2>Education</h2>
+        <dl>
+          <dt><b>Rochester Institute of Technology</b></dt>
+          <dd>Associate of Applied Science in Mobile Application Development, August 2021 - present</dd>
+          <dt><b>Georgia Piedmont Technical College</b></dt>
+          <dd>TCC earned with 3.85 GPA, PC Repair & Network Technician, August 2019 - May 2020</dd>
+        </dl>
 
+        <h3>Courses Taken</h3>
+        <ul id="courses-list">
+          <!-- Dynamically populated by JavaScript -->
+        </ul>
 
+        <h2>Previous Project(s)</h2>
+        <p><b>FW: Writing Seminar — Spring Semester 2025</b></p>
+        <ul>
+          <li><a href="projects/writing_seminar_2225/Menchaca_UWRT150_Final.pdf" target="_blank">Final APA Paper</a></li>
+        </ul>
+      </div>
     </div>
-</main>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Erik Menchaca | All Rights Reserved</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+<!--    External javascript-->
+
 </body>
 
 </html>
