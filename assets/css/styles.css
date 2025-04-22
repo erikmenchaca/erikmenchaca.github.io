@@ -231,4 +231,8 @@
   .no-transition * {
     transition: none !important;
   }
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff; /* Bright white for dark background */
+}
   
