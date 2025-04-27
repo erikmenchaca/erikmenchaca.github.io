@@ -1,0 +1,21 @@
+#editable-region {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	padding: 20px;
+	justify-items: center;
+  }
+  
+  #editable-region img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	transition: transform 0.3s;
+  }
+  
+  #editable-region img:hover {
+	transform: scale(1.05);
+  }
+  
