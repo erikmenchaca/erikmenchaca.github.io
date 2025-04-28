@@ -1,21 +1,74 @@
+/* General Styles */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f8e8d0;
+}
+
+/* Header */
+#header-region {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+#header-region img {
+	width: 48%;
+	height: auto;
+	object-fit: contain;
+}
+
+/* Navigation */
+#nav-region {
+	display: flex;
+	justify-content: center;
+	background-color: #9b59b6;
+	padding: 10px 0;
+}
+
+#nav-region a {
+	margin: 0 10px;
+}
+
+#nav-region img {
+	width: 150px;
+	height: auto;
+	cursor: pointer;
+}
+
+/* Main (Editable Region) */
 #editable-region {
+	padding: 20px;
+}
+
+/* Grid inside Editable Region */
+.grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 15px;
-	padding: 20px;
 	justify-items: center;
-  }
-  
-  #editable-region img {
+}
+
+/* Each image in the grid */
+.grid-container img {
 	width: 200px;
 	height: 200px;
 	object-fit: cover;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-	transition: transform 0.3s;
-  }
-  
-  #editable-region img:hover {
+	transition: transform 0.3s ease-in-out;
+}
+
+.grid-container img:hover {
 	transform: scale(1.05);
-  }
-  
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: #f8e8d0;
+	font-size: 0.9em;
+	margin-top: 20px;
+}
