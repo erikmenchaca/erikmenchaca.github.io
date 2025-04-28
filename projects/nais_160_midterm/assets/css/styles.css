@@ -24,11 +24,9 @@ body {
 #nav-region {
     display: flex;
     justify-content: center;
-    width: 1000px; /* 🔥 SAME width as header! */
     margin: 0 auto; /* 🔥 Center it */
     background-color: #9b59b6;
     padding: 10px 0;
-    border-top: 2px solid #000000; /* optional thin black top border if you want */
 }
 
 #nav-region a {
@@ -74,6 +72,9 @@ body {
     justify-content: center; /* make sure images are centered nicely */
     margin-top: 20px; /* small spacing */
     margin-bottom: 0; /* no extra gap */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-2centered {
@@ -81,6 +82,9 @@ body {
     justify-content: center;
     gap: 15px; /* little spacing between last 2 images */
     margin-top: 10px; /* smaller gap between rows */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-4x2 img,

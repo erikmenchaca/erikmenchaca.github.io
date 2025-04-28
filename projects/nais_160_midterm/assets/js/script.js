@@ -69,52 +69,52 @@ async function loadHeaderAndNav() {
   }
 }
 
-async function loadImages(section) {
-  try {
-    const basePath = window.location.pathname.includes('contents') ? '../' : '';
+ async function loadImages(section) {
+   try {
+     const basePath = window.location.pathname.includes('contents') ? '../' : '';
 
-    const response = await fetch(basePath + 'assets/json/data.json');
-    const data = await response.json();
-    const images = data[section];
+     const response = await fetch(basePath + 'assets/json/data.json');
+     const data = await response.json();
+     const images = data[section];
 
-    console.log(`✅ Successfully loaded ${section} images:`, images);
+     console.log(`✅ Successfully loaded ${section} images:`, images);
 
-    const main = document.getElementById('editable-region');
-    main.innerHTML = '';
+     const main = document.getElementById('editable-region');
+     main.innerHTML = '';
 
-    // First container: 8 images
-    const gridFirst8 = document.createElement('div');
-    gridFirst8.className = 'grid-4x2';
+     // First container: 8 images
+     const gridFirst8 = document.createElement('div');
+     gridFirst8.className = 'grid-4x2';
 
-    images.slice(0, 8).forEach(img => {
-      const imageElement = document.createElement('img');
-      imageElement.src = basePath + img.src;
-      imageElement.alt = img.alt;
-      imageElement.title = img.title;
-      gridFirst8.appendChild(imageElement);
-    });
+     images.slice(0, 8).forEach(img => {
+       const imageElement = document.createElement('img');
+       imageElement.src = basePath + img.src;
+       imageElement.alt = img.alt;
+       imageElement.title = img.title;
+       gridFirst8.appendChild(imageElement);
+     });
 
-    // Second container: 2 images
-    const gridLast2 = document.createElement('div');
-    gridLast2.className = 'grid-2centered';
+     // Second container: 2 images
+     const gridLast2 = document.createElement('div');
+     gridLast2.className = 'grid-2centered';
 
-    images.slice(8, 10).forEach(img => {
-      const imageElement = document.createElement('img');
-      imageElement.src = basePath + img.src;
-      imageElement.alt = img.alt;
-      imageElement.title = img.title;
-      gridLast2.appendChild(imageElement);
-    });
+     images.slice(8, 10).forEach(img => {
+       const imageElement = document.createElement('img');
+       imageElement.src = basePath + img.src;
+       imageElement.alt = img.alt;
+       imageElement.title = img.title;
+       gridLast2.appendChild(imageElement);
+     });
 
-    // Add both containers to main
-    main.appendChild(gridFirst8);
-    main.appendChild(gridLast2);
+     // Add both containers to main
+     main.appendChild(gridFirst8);
+     main.appendChild(gridLast2);
 
-    console.log(`✅ ${section} images inserted into correct layout`);
-  } catch (error) {
-    console.error(`❌ Error loading ${section} images:`, error);
-  }
-}
+     console.log(`✅ ${section} images inserted into correct layout`);
+   } catch (error) {
+     console.error(`❌ Error loading ${section} images:`, error);
+   }
+ }
 
 
 document.addEventListener('DOMContentLoaded', () => {
