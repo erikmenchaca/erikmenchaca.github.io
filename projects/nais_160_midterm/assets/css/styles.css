@@ -7,24 +7,28 @@ body {
 
 /* Header */
 #header-region {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
 }
 
 #header-region img {
-	width: 48%;
-	height: auto;
-	object-fit: contain;
+    object-fit: cover; /* make sure the image fits perfectly */
+    margin: 0;
+    padding: 5px;
+	
 }
-
 /* Navigation */
 #nav-region {
-	display: flex;
-	justify-content: center;
-	background-color: #9b59b6;
-	padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    width: 1000px; /* 🔥 SAME width as header! */
+    margin: 0 auto; /* 🔥 Center it */
+    background-color: #9b59b6;
+    padding: 10px 0;
+    border-top: 2px solid #000000; /* optional thin black top border if you want */
 }
 
 #nav-region a {
@@ -63,6 +67,39 @@ body {
 .grid-container img:hover {
 	transform: scale(1.05);
 }
+.grid-4x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* smaller gap */
+    justify-content: center; /* make sure images are centered nicely */
+    margin-top: 20px; /* small spacing */
+    margin-bottom: 0; /* no extra gap */
+}
+
+.grid-2centered {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* little spacing between last 2 images */
+    margin-top: 10px; /* smaller gap between rows */
+}
+
+.grid-4x2 img,
+.grid-2centered img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    margin: 0; /* NO margin inside grid items */
+    padding: 0; /* NO padding inside grid items */
+}
+
+.grid-4x2 img:hover,
+.grid-2centered img:hover {
+    transform: scale(1.05);
+}
+
 
 /* Footer */
 footer {
@@ -71,4 +108,56 @@ footer {
 	background-color: #f8e8d0;
 	font-size: 0.9em;
 	margin-top: 20px;
+}
+/* Wrapper for Header and Navigation */
+#header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+/* Header */
+#header-region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-region img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Navigation */
+#nav-region {
+    display: flex;
+    justify-content: center;
+    background-color: #9b59b6;
+    padding: 10px 0;
+    width: 100%; /* stretch based on parent width (logo + banner) */
+}
+
+#nav-region a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+#nav-region img {
+    width: 150px;
+    height: auto;
+}
+
+/* Editable Main */
+#editable-region {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
 }
