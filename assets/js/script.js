@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (coursesList) {
                     data.courses.forEach((course, index) => {
                         const li = document.createElement('li');
-                        li.innerHTML = `<b>${course}</b><br><small>${data.descriptions[index] || ''}</small>`;
+                        li.innerHTML = `${course}`;
                         coursesList.appendChild(li);
                     });
                 }
