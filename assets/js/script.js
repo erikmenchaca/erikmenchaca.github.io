@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const resetButton = document.getElementById('resetSettings');
     const closePanelButton = document.getElementById('closePanel');
     const toast = document.getElementById('toast');
-
     let toastTimeout;
 
     function applyFontSize() {
@@ -150,7 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load course data
     addCourseToList();
     addUpComingCourseToList();
+
+    // Last Updated Footer
     const lastUpdated = new Date(document.lastModified);
-  document.getElementById("last-updated").textContent = 
-    "Last updated: " + lastUpdated.toLocaleDateString();
+    const lastUpdatedElement = document.getElementById("last-updated");
+    if (lastUpdatedElement) {
+        lastUpdatedElement.textContent = "Last updated: " + lastUpdated.toLocaleDateString();
+    }
 });
