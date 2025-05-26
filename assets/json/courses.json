@@ -12,7 +12,13 @@
     "STAT-145: Introduction to Statistics I",
     "STAT-146: Introduction of Statistics II",
     "PSYC-223: Cognitive Psychology",
-    "ISTE-340: Client Programming",
     "UWRT-150: FYW: Writing Seminar"
+  ],
+  "upcomingCourses":
+  [
+    "ISTE-340: Client Programming",
+    "PSYC-250: Research Methods I",
+    "ISTE-264: Prototyping and Usability Testing",
+    "NMDE-112: New Media Design Digital Survey II"
   ]
 }

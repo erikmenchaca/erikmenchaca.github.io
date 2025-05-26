@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const closePanelButton = document.getElementById('closePanel');
     const toast = document.getElementById('toast');
 
+    let toastTimeout;
+
     function applyFontSize() {
         document.body.style.fontSize = `${currentFontSize}px`;
     }
@@ -34,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateDarkModeButtonText() {
-        darkModeButton.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        if (darkModeButton) {
+            darkModeButton.textContent = document.body.classList.contains('dark-mode')
+                ? 'Switch to Light Mode'
+                : 'Switch to Dark Mode';
+        }
     }
 
     function toggleDarkMode() {
@@ -43,30 +49,31 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
         updateDarkModeButtonText();
         setTimeout(() => {
-            document.body.classList.remove('no-transition'); // <-- REMOVE after 50ms
+            document.body.classList.remove('no-transition');
         }, 50);
     }
 
     function toggleAccessibilityPanel() {
-        if (accessibilityPanel.classList.contains('active')) {
-            // The Panel is open ➔ Close it
-            accessibilityPanel.classList.remove('active');
-            accessibilityPanel.classList.add('hidden');
-            accessibilityToggle.style.display = 'flex'; // Show button again
-        } else {
-            // Panel is closed ➔ Open it
-            accessibilityPanel.classList.add('active');
-            accessibilityPanel.classList.remove('hidden');
-            accessibilityToggle.style.display = 'none'; // Hide button
+        if (accessibilityPanel && accessibilityToggle) {
+            if (accessibilityPanel.classList.contains('active')) {
+                accessibilityPanel.classList.remove('active');
+                accessibilityPanel.classList.add('hidden');
+                accessibilityToggle.style.display = 'flex';
+            } else {
+                accessibilityPanel.classList.add('active');
+                accessibilityPanel.classList.remove('hidden');
+                accessibilityToggle.style.display = 'none';
+            }
         }
     }
 
     function closeAccessibilityPanel() {
-        accessibilityPanel.classList.remove('active');
-        accessibilityPanel.classList.add('hidden');
-        accessibilityToggle.style.display = 'flex'; // Show button again
+        if (accessibilityPanel && accessibilityToggle) {
+            accessibilityPanel.classList.remove('active');
+            accessibilityPanel.classList.add('hidden');
+            accessibilityToggle.style.display = 'flex';
+        }
     }
-
 
     function resetAccessibilitySettings() {
         document.body.classList.remove('dark-mode');
@@ -80,9 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showToast(message) {
         if (!toast) return;
+        clearTimeout(toastTimeout);
         toast.textContent = message;
         toast.classList.add('show');
-        setTimeout(() => {
+        toastTimeout = setTimeout(() => {
             toast.classList.remove('show');
         }, 3000);
     }
@@ -92,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(data => {
                 const coursesList = document.getElementById('courses-list');
-                if (coursesList) {
-                    data.courses.forEach((course, index) => {
+                if (coursesList && Array.isArray(data.courses)) {
+                    data.courses.forEach(course => {
                         const li = document.createElement('li');
-                        li.innerHTML = `${course}`;
+                        li.textContent = course;
                         coursesList.appendChild(li);
                     });
                 }
@@ -105,22 +113,44 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    function addUpComingCourseToList() {
+        fetch('assets/json/courses.json')
+            .then(response => response.json())
+            .then(data => {
+                const upcoming = document.getElementById('upcoming-courses-list');
+                if (upcoming && Array.isArray(data.upcomingCourses)) {
+                    data.upcomingCourses.forEach(course => {
+                        const li = document.createElement('li');
+                        li.textContent = course;
+                        upcoming.appendChild(li);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error loading upcoming courses:', error);
+            });
+    }
+
+    // Load saved dark mode preference
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
     }
+
     updateDarkModeButtonText();
     applyFontSize();
 
-    document.getElementById('increaseText').addEventListener('click', increaseTextSize);
-    document.getElementById('decreaseText').addEventListener('click', decreaseTextSize);
-    darkModeButton.addEventListener('click', toggleDarkMode);
-    accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
-    closePanelButton.addEventListener('click', closeAccessibilityPanel);
-    resetButton.addEventListener('click', resetAccessibilitySettings);
+    // Event Listeners
+    document.getElementById('increaseText')?.addEventListener('click', increaseTextSize);
+    document.getElementById('decreaseText')?.addEventListener('click', decreaseTextSize);
+    darkModeButton?.addEventListener('click', toggleDarkMode);
+    accessibilityToggle?.addEventListener('click', toggleAccessibilityPanel);
+    closePanelButton?.addEventListener('click', closeAccessibilityPanel);
+    resetButton?.addEventListener('click', resetAccessibilitySettings);
 
-    // CALL THIS
+    // Load course data
     addCourseToList();
-
-
+    addUpComingCourseToList();
+    const lastUpdated = new Date(document.lastModified);
+  document.getElementById("last-updated").textContent = 
+    "Last updated: " + lastUpdated.toLocaleDateString();
 });
-  
