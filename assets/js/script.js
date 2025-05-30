@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const appendCourses = (ul, arr = []) => {
                 arr.forEach(item => {
                     const li = document.createElement('li');
-                    li.innerHTML = `${item.name}, <span style="font-style: italic;">${item.teacher}</span>`;
+                    li.innerHTML = `${item.name}, <span style="font-style: italic; color: #h8797;">${item.teacher}</span>`;
                     ul?.appendChild(li);
                 });
             };
