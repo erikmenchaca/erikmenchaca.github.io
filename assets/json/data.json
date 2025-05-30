@@ -1,40 +1,70 @@
 {
   "courses": [
-    "NACT-230: Introduction to Programming",
-    "NMAD-155: Survey of Emerging Visual Design",
-    "NMAD-180: Programming Fundamentals I: Mobile Domain",
-    "NACA-120: Problem Analysis and Software Development I",
-    "ISTE-140: Web and Mobile I",
-    "ISTE-240: Web and Mobile II",
-    "ISTE-262: Foundations of Human-Centered Computing",
-    "NACA-121: Survey of Computational Problem Analysis II",
-    "ISTE-252: Foundations of Mobile Design",
-    "STAT-145: Introduction to Statistics I",
-    "STAT-146: Introduction of Statistics II",
-    "PSYC-223: Cognitive Psychology",
-    "UWRT-150: FYW: Writing Seminar"
+    {
+      "name": "NACT-230: Introduction to Programming",
+      "teacher": "Michael Berrios"
+    },
+    {
+      "name": "NACA-120: Problem Analysis and Software Development I",
+      "teacher": "Michael Berrios"
+    },
+    {
+      "name": "NMAD-155: Survey of Emerging Visual Design",
+      "teacher": "Walter Bubie"
+    },
+    {
+      "name": "ISTE-140: Web and Mobile I",
+      "teacher": "John-Paul Takats"
+    },
+    {
+      "name": "ISTE-240: Web and Mobile II",
+      "teacher": "John-Paul Takats"
+    },
+    {
+      "name": "NACA-121: Survey of Computational Problem Analysis II",
+      "teacher": "Kemoy Campbell"
+    },
+    {
+      "name": "STAT-145: Introduction to Statistics I",
+      "teacher": "Song Hoa Choi, Sharron Webster"
+    },
+    {
+      "name": "STAT-146: Introduction of Statistics II",
+      "teacher": "Kathryn Graf"
+    },
+    {
+      "name": "ISTE-262: Foundations of Human-Centered Computing",
+      "teacher": "Stephen Cady"
+    },
+    {
+      "name": "ISTE-252: Foundations of Mobile Design",
+      "teacher": "Bryan French"
+    },
+    {
+      "name": "PSYC-223: Cognitive Psychology",
+      "teacher": "Matthew Altobelli"
+    },
+    {
+      "name": "UWRT-150: FYW: Writing Seminar",
+      "teacher": "Cindy Officer"
+    }
   ],
-  "upcomingCourses":
-  [
-    "ISTE-340: Client Programming",
-    "PSYC-250: Research Methods I",
-    "ISTE-264: Prototyping and Usability Testing",
-    "NMDE-112: New Media Design Digital Survey II"
-  ],
-  "teachers":
-  [
-    "Michael Berrios",
-    "Walter Bubie",
-    "Kemoy Campbell",
-    "John-Paul Takats",
-    "Stephen Cady",
-    "Bryan French",
-    "Song Hoa Choi",
-    "Sharron Webster",
-    "Kathryn Graf",
-    "Matthew Altobelli",
-    "Cindy Officer",
-    "Dan Bogaard",
-    "TBA"
+  "upcomingCourses": [
+    {
+      "name": "ISTE-340: Client Programming",
+      "teacher": "Dan Bogaard"
+    },
+    {
+      "name": "PSYC-250: Research Methods I",
+      "teacher": "Lilia Rissman"
+    },
+    {
+      "name": "ISTE-264: Prototyping and Usability Testing",
+      "teacher": "Stephen Cady"
+    },
+    {
+      "name": "NMDE-112: New Media Design Digital Survey II",
+      "teacher": "TBA"
+    }
   ]
 }
