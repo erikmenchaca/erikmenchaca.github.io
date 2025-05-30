@@ -95,7 +95,7 @@
     els.resetBtn?.addEventListener('click', ui.reset);
 
     /* ---------- Courses JSON (single fetch) ---------- */
-    fetch('assets/json/courses.json')
+    fetch('assets/json/data.json')
     .then(r => r.json())
     .then(data => {
     const append = (ul, arr = []) => arr.forEach(text => {
