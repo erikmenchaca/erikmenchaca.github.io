@@ -51,8 +51,8 @@
   ],
   "upcomingCourses": [
     {
-      "name": "ISTE-340: Client Programming",
-      "teacher": "Dan Bogaard"
+      "name": "GCIS-124: Software Development & Problem Solving II",
+      "teacher": "Anna Iacovino"
     },
     {
       "name": "PSYC-250: Research Methods I",
@@ -64,7 +64,7 @@
     },
     {
       "name": "NMDE-112: New Media Design Digital Survey II",
-      "teacher": "TBA"
+      "teacher": "Joel Rosen"
     }
   ]
 }
