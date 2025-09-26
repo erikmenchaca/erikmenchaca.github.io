@@ -249,3 +249,7 @@ footer {
     max-width: 90%;
   }
 }
+iframe {
+  width: 100%;
+  height: 768px;
+}
