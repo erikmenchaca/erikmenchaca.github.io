@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { WelcomePage } from './components/WelcomePage';
 import { Sidebar } from './components/Sidebar';
 import { DashboardPage } from './components/DashboardPage';
 import { JobSearchPage } from './components/JobSearchPage';
@@ -24,6 +25,7 @@ type Page =
   | 'job-detail';
 
 export default function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
   const [currentPage, setCurrentPage] = useState<Page>('dashboard');
 
   const handleNavigate = (page: string) => {
@@ -72,6 +74,11 @@ export default function App() {
         return <DashboardPage onNavigate={handleNavigate} onViewJob={handleViewJob} />;
     }
   };
+
+  // Show welcome page first
+  if (showWelcome) {
+    return <WelcomePage onStart={() => setShowWelcome(false)} />;
+  }
 
   return (
     <div className="flex min-h-screen bg-gray-50">
