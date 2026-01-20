@@ -47,9 +47,7 @@
     {
       "name": "UWRT-150: FYW: Writing Seminar",
       "teacher": "Cindy Officer"
-    }
-  ],
-  "upcomingCourses": [
+    },
     {
       "name": "GCIS-124: Software Development & Problem Solving II",
       "teacher": "Anna Iacovino"
@@ -65,10 +63,12 @@
     {
       "name": "NMDE-112: New Media Design Digital Survey II",
       "teacher": "Joel Rosen"
-    },
+    }
+  ],
+  "upcomingCourses": [
     {
-      "name": "HIST-333: Diversity in Deaf Community",
-      "teacher": "LeeAnne Valentine"
+      "name": "MLAS-302: Intermediate American Sign Language II",
+      "teacher": "Barry Haywood"
     },
     {
       "name": "ISTE-266: Design For Accessibility",
@@ -87,7 +87,7 @@
       "teacher": "Karen Putz"
     },
     {
-      "name":"ISTE-99: School of Information Second Year Seminar",
+      "name": "ISTE-99: School of Information Second Year Seminar",
       "teacher": "Elizabeth Foster, Angela Pezzimenti"
     }
   ]
