@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (upcomingList && Array.isArray(data.upcomingCourses)) {
                     data.upcomingCourses.forEach(course => {
                         const li = document.createElement('li');
-                        li.innerHTML = `${course.name}, <span style="font-style: italic; color: black;">${course.teacher}</span>`;
+                        li.innerHTML = `${course.name}`;
                         upcomingList.appendChild(li);
                     });
                 }
