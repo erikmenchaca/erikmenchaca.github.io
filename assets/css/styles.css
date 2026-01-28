@@ -213,12 +213,12 @@ ul li a:hover {
   color: #ff6600;
 }
 
-/* === Typography === */
-h2, h3 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  color: #222;
-}
+/*!* === Typography === *!*/
+/*h2, h3 {*/
+/*  margin-top: 25px;*/
+/*  margin-bottom: 10px;*/
+/*  color: #222;*/
+/*}*/
 
 /* === Footer === */
 footer {
