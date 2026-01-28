@@ -1,94 +1,76 @@
 {
   "courses": [
     {
-      "name": "NACT-230: Introduction to Programming",
-      "teacher": "Michael Berrios"
+      "name": "NACT-230: Introduction to Programming"
+
     },
     {
-      "name": "NACA-120: Problem Analysis and Software Development I",
-      "teacher": "Michael Berrios"
+      "name": "NACA-120: Problem Analysis and Software Development I"
+
     },
     {
-      "name": "NMAD-155: Survey of Emerging Visual Design",
-      "teacher": "Walter Bubie"
+      "name": "NMAD-155: Survey of Emerging Visual Design"
+
     },
     {
-      "name": "ISTE-140: Web and Mobile I",
-      "teacher": "John-Paul Takats"
+      "name": "ISTE-140: Web and Mobile I"
+
     },
     {
-      "name": "ISTE-240: Web and Mobile II",
-      "teacher": "John-Paul Takats"
+      "name": "ISTE-240: Web and Mobile II"
+
     },
     {
-      "name": "NACA-121: Survey of Computational Problem Analysis II",
-      "teacher": "Kemoy Campbell"
+      "name": "NACA-121: Survey of Computational Problem Analysis II"
     },
     {
-      "name": "STAT-145: Introduction to Statistics I",
-      "teacher": "Song Hoa Choi, Sharron Webster"
+      "name": "STAT-145: Introduction to Statistics I"
     },
     {
-      "name": "STAT-146: Introduction of Statistics II",
-      "teacher": "Kathryn Graf"
+      "name": "STAT-146: Introduction of Statistics II"
     },
     {
-      "name": "ISTE-262: Foundations of Human-Centered Computing",
-      "teacher": "Stephen Cady"
+      "name": "ISTE-262: Foundations of Human-Centered Computing"
     },
     {
-      "name": "ISTE-252: Foundations of Mobile Design",
-      "teacher": "Bryan French"
+      "name": "ISTE-252: Foundations of Mobile Design"
     },
     {
-      "name": "PSYC-223: Cognitive Psychology",
-      "teacher": "Matthew Altobelli"
+      "name": "PSYC-223: Cognitive Psychology"
     },
     {
-      "name": "UWRT-150: FYW: Writing Seminar",
-      "teacher": "Cindy Officer"
+      "name": "UWRT-150: FYW: Writing Seminar"
     },
     {
-      "name": "GCIS-124: Software Development & Problem Solving II",
-      "teacher": "Anna Iacovino"
+      "name": "GCIS-124: Software Development & Problem Solving II"
     },
     {
-      "name": "PSYC-250: Research Methods I",
-      "teacher": "Lilia Rissman"
+      "name": "PSYC-250: Research Methods I"
     },
     {
-      "name": "ISTE-264: Prototyping and Usability Testing",
-      "teacher": "Stephen Cady"
+      "name": "ISTE-264: Prototyping and Usability Testing"
     },
     {
-      "name": "NMDE-112: New Media Design Digital Survey II",
-      "teacher": "Joel Rosen"
-    }
+      "name": "NMDE-112: New Media Design Digital Survey II"}
   ],
   "upcomingCourses": [
     {
-      "name": "MLAS-302: Intermediate American Sign Language II",
-      "teacher": "Barry Haywood"
+      "name": "MLAS-302: Intermediate American Sign Language II"
+
     },
     {
-      "name": "ISTE-266: Design For Accessibility",
-      "teacher": "Elissa Weeden"
+      "name": "ISTE-266: Design For Accessibility"
     },
     {
-      "name": "PSYC-251: Research Methods II",
-      "teacher": "Allison Fitch"
+      "name": "PSYC-251: Research Methods II"
     },
     {
-      "name": "SOCI-240: Deaf Culture in America",
-      "teacher": "Aimee Whyte"
+      "name": "SOCI-240: Deaf Culture in America"
     },
     {
-      "name": "WHWS-5: Finding your Passion",
-      "teacher": "Karen Putz"
+      "name": "WHWS-5: Finding your Passion"
     },
     {
-      "name": "ISTE-99: School of Information Second Year Seminar",
-      "teacher": "Elizabeth Foster, Angela Pezzimenti"
-    }
+      "name": "ISTE-99: School of Information Second Year Seminar"}
   ]
 }
