@@ -2,23 +2,18 @@
   "courses": [
     {
       "name": "NACT-230: Introduction to Programming"
-
     },
     {
       "name": "NACA-120: Problem Analysis and Software Development I"
-
     },
     {
       "name": "NMAD-155: Survey of Emerging Visual Design"
-
     },
     {
       "name": "ISTE-140: Web and Mobile I"
-
     },
     {
       "name": "ISTE-240: Web and Mobile II"
-
     },
     {
       "name": "NACA-121: Survey of Computational Problem Analysis II"
@@ -51,14 +46,6 @@
       "name": "ISTE-264: Prototyping and Usability Testing"
     },
     {
-      "name": "NMDE-112: New Media Design Digital Survey II"}
-  ],
-  "upcomingCourses": [
-    {
-      "name": "MLAS-302: Intermediate American Sign Language II"
-
-    },
-    {
       "name": "ISTE-266: Design For Accessibility"
     },
     {
@@ -71,6 +58,33 @@
       "name": "WHWS-5: Finding your Passion"
     },
     {
-      "name": "ISTE-99: School of Information Second Year Seminar"}
+      "name": "ISTE-99: School of Information Second Year Seminar"
+    },
+    {
+      "name": "MLAS-302: Intermediate American Sign Language II"
+    }
+  ],
+  "upcomingCourses": [
+    {
+      "name": "NMDE-112: New Media Design Digital Survey II"
+    },
+    {
+      "name": "ISTE-500: Senior Development Project I"
+    },
+    {
+      "name": "ISTE-501: Senior Development Project II"
+    },
+    {
+      "name": "ISTE-560: Fundamentals of Instructional Technology"
+    },
+    {
+      "name": "ISTE-563: Access and Assistive Technology"
+    },
+    {
+      "name": "MLAS-302: Advanced American Sign Language I"
+    },
+    {
+      "name": "PSYC-235: Learning and Behavior"
+    }
   ]
 }
