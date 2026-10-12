@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('year');
+    const lastUpdatedElement = document.getElementById('last-updated');
+
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
+    }
+
+    if (lastUpdatedElement) {
+        const now = new Date();
+        lastUpdatedElement.textContent = `Last updated: ${now.toLocaleDateString(undefined, {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        })}`;
     }
 
     let currentFontSize = parseInt(localStorage.getItem('fontSize')) || 16;
@@ -34,9 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateDarkModeButtonText() {
-        darkModeButton.innerHTML = document.body.classList.contains('dark-mode')
-            ? '🌞 Light Mode'
-            : '🌙 Dark Mode';
+        if (darkModeButton) {
+            darkModeButton.innerHTML = document.body.classList.contains('dark-mode')
+                ? '🌞 Light Mode'
+                : '🌙 Dark Mode';
+        }
     }
 
     function toggleDarkMode() {
@@ -46,11 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function toggleAccessibilityPanel() {
-        accessibilityPanel.classList.toggle('active');
+        if (accessibilityPanel) {
+            accessibilityPanel.classList.toggle('active');
+        }
     }
 
     function closeAccessibilityPanel() {
-        accessibilityPanel.classList.remove('active');
+        if (accessibilityPanel) {
+            accessibilityPanel.classList.remove('active');
+        }
     }
 
     function resetAccessibilitySettings() {
@@ -97,14 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (coursesList && Array.isArray(data.courses)) {
                     data.courses.forEach(course => {
                         const li = document.createElement('li');
-                        li.innerHTML = `${course.name}`;
+                        li.textContent = course.name;
                         coursesList.appendChild(li);
                     });
                 }
                 if (upcomingList && Array.isArray(data.upcomingCourses)) {
                     data.upcomingCourses.forEach(course => {
                         const li = document.createElement('li');
-                        li.innerHTML = `${course.name}`;
+                        li.textContent = course.name;
                         upcomingList.appendChild(li);
                     });
                 }
@@ -121,12 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDarkModeButtonText();
     applyFontSize();
 
-    document.getElementById('increaseText').addEventListener('click', increaseTextSize);
-    document.getElementById('decreaseText').addEventListener('click', decreaseTextSize);
-    darkModeButton.addEventListener('click', toggleDarkMode);
-    accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
-    closePanelButton.addEventListener('click', closeAccessibilityPanel);
-    resetButton.addEventListener('click', resetAccessibilitySettings);
+    const increaseTextButton = document.getElementById('increaseText');
+    const decreaseTextButton = document.getElementById('decreaseText');
+
+    if (increaseTextButton) increaseTextButton.addEventListener('click', increaseTextSize);
+    if (decreaseTextButton) decreaseTextButton.addEventListener('click', decreaseTextSize);
+    if (darkModeButton) darkModeButton.addEventListener('click', toggleDarkMode);
+    if (accessibilityToggle) accessibilityToggle.addEventListener('click', toggleAccessibilityPanel);
+    if (closePanelButton) closePanelButton.addEventListener('click', closeAccessibilityPanel);
+    if (resetButton) resetButton.addEventListener('click', resetAccessibilitySettings);
 
     addCourseToList();
 });
