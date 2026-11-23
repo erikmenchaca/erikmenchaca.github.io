@@ -1,125 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erik Menchaca - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" type="image/x-icon" href="assets/media/favicon.ico" />
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Erik Menchaca — human-centered computing student, accessibility advocate, and emerging product designer.">
+  <title>Erik Menchaca — Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/media/favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
-  <header>
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#courses">Courses</a></li>
-      </ul>
-    </nav>
-    <h1>Erik Menchaca</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Accessibility Button -->
-    <div class="accessibility-menu">
-      <button id="accessibilityToggle" aria-label="Accessibility Options">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
-          <path d="M12 2a2 2 0 100 4 2 2 0 000-4zm5 7h-3v3.17l4.41 4.42a1 1 0 01-1.41 1.41L13 13.41V20a1 1 0 11-2 0v-8.59l-2.3 2.29a1 1 0 01-1.4-1.42l3.59-3.58V9H7a1 1 0 110-2h10a1 1 0 110 2z" />
-        </svg>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Erik Menchaca, home">
+        <span class="brand-mark" aria-hidden="true">EM</span>
+        <span>Erik Menchaca</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span>
+        <span class="sr-only">Menu</span>
       </button>
-    </div>
 
-    <!-- Accessibility Panel -->
-    <div id="accessibilityPanel" class="accessibility-panel hidden">
-      <button id="closePanel" aria-label="Close Accessibility Settings">❌</button>
-      <h2>Accessibility Settings</h2>
-      <button id="increaseText">Increase Text Size</button>
-      <button id="decreaseText">Decrease Text Size</button>
-      <button id="darkModeToggle">Switch to Dark Mode</button>
-      <button id="resetSettings">Reset Accessibility Settings</button>
-    </div>
-
-    <!-- Toast -->
-    <div id="toast" class="toast hidden">Settings reset successfully!</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a class="nav-resume" href="Profile.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <div class="wrapper">
-      <div class="profile">
-        <img src="assets/media/erik_m.jpg" alt="Portrait of Erik Menchaca" />
-        <div class="contact">
-          <p><b>Email:</b> <a href="mailto:Erik@mail.rit.edu">Erik@mail.rit.edu</a></p>
-          <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank">Erik Menchaca</a></p>
-          <p><b>GitHub:</b> <a href="https://github.com/erikmenchaca" target="_blank">Erik Menchaca</a></p>
-          <p><b>Anticipated Graduation:</b> May 2027</p>
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Human-centered computing</p>
+        <h1>Making technology<br><em>feel human.</em></h1>
+        <p class="lede">I’m Erik, a student at Rochester Institute of Technology exploring accessibility, instructional technology, and thoughtful digital experiences.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work</a>
+          <a class="text-link" href="mailto:Erik@mail.rit.edu">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
       </div>
 
-      <div class="mainbody">
-        <p class="aboutme">
-          Hello! My name is Erik Menchaca. I have created this website for my professional portfolio in hopes
-          of finding a co-op, internship, or full-time job. I enjoy my academic career, studying Applied
-          Computer Technology with an emphasis on Human-Computer Interaction and Psychology.
-        </p>
+      <figure class="portrait-frame">
+        <div class="portrait-accent accent-coral" aria-hidden="true"></div>
+        <div class="portrait-accent accent-sky" aria-hidden="true"></div>
+        <img src="assets/media/erik_m.jpg" alt="Erik Menchaca">
+        <figcaption>
+          <span>Based in</span>
+          <strong>Rochester, NY</strong>
+        </figcaption>
+      </figure>
+    </section>
 
-        <h2 id="experience">Related Experience</h2>
-        <h3>Peer and Curriculum Consultant for NAIS-160: Web Design</h3>
-        <dl>
-          <dd>
-            <p><b>Rochester Institute of Technology/National Technical Institute of the Deaf, Fall Semester 2021</b></p>
-            <p>
-              I collaborated with an NTID Visual Communication Studies faculty to support students pursuing their associate degrees by creating video demonstrations and offering peer tutoring for course assignments.
-            </p>
-          </dd>
-        </dl>
+    <section class="work-section" id="work">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">01</p>
+            <h2>Selected work</h2>
+          </div>
+          <p>Academic research and web projects shaped by curiosity, usability, and inclusive design.</p>
+        </div>
 
-        <h2 id="education">Education</h2>
-        <dl>
-          <dt>
-            <b>Rochester Institute of Technology</b>
-            <dd>Bachelor of Science in Human-Centered Computing with concentrations in Accessibility and Instructional Technology and American Sign Language and Deaf Cultural Studies immersion, January 2026 - present</dd>
-          </dt>
-          <dt><b>Rochester Institute of Technology</b></dt>
-          <dd>Associate of Science in Applied Computer Technology with Human-Centered Computing concentration, August 2021 - December 2025</dd>
-          <dt><b>Georgia Piedmont Technical College</b></dt>
-          <dd>Technical Certificate Credit earned with 3.85 GPA, PC Repair &amp; Network Technician, August 2019 - May 2020</dd>
-        </dl>
+        <div class="work-grid">
+          <a class="project-card project-featured" href="projects/research_methods_ii/paper_website/index.html">
+            <div class="project-meta">
+              <span>Research website</span>
+              <span>2026</span>
+            </div>
+            <div class="project-art project-art-coral" aria-hidden="true">
+              <span class="shape shape-one"></span>
+              <span class="shape shape-two"></span>
+              <span class="shape shape-three"></span>
+            </div>
+            <div class="project-copy">
+              <h3>Research Methods II</h3>
+              <p>Literature review and interactive study website</p>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
 
-        <h2 id="courses">Courses Taken</h2>
-        <ul id="courses-list">
-          <!-- Populated by script.js -->
-        </ul>
+          <a class="project-card" href="projects/nais_160_midterm/index.html" target="_blank" rel="noopener">
+            <div class="project-meta">
+              <span>Web design</span>
+              <span>2021</span>
+            </div>
+            <div class="project-art project-art-sky" aria-hidden="true">
+              <span class="browser-window"></span>
+              <span class="browser-dot dot-one"></span>
+              <span class="browser-dot dot-two"></span>
+            </div>
+            <div class="project-copy">
+              <h3>Web Design I Midterm</h3>
+              <p>Interactive HTML, CSS, and JavaScript project</p>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
 
-        <h3>Upcoming Courses (Currently Taking)</h3>
-        <ul id="upcoming-courses-list">
-          <!-- Populated by script.js -->
-        </ul>
-
-        <h2>Previous Project(s)</h2>
-        <h3>Research Methods II &mdash; Spring Semester 2026</h3>
-        <ul>
-          <li><a href="projects/research_methods_ii/Erik_PSYC-251-01-2255_LiteratureReview_Fitch.pdf" target="_blank">RM2 Literature Review</a>, <a href="https://erikpsyc251paper.lovable.app" target="_blank">Study Website</a></li>
-        </ul>
-        <h3>Research Methods I &mdash; Fall Semester 2025</h3>
-        <ul>
-          <li><a href="projects/research_methods_i/Erik_PSYC-250-01-2251_LiteratureReview_Rissman.pdf" target="_blank">RM1 Literature Review</a></li>
-        </ul>
-        <h3>FW: Writing Seminar &mdash; Spring Semester 2023</h3>
-        <ul>
-          <li><a href="projects/writing_seminar_2225/Menchaca_UWRT150_Final.pdf" target="_blank">Final APA Paper</a></li>
-        </ul>
-        <h3>Web Design I &mdash; Spring Semester 2021</h3>
-        <ul>
-          <li><a href="projects/nais_160_midterm/index.html" target="_blank">Mid-Term</a></li>
-        </ul>
+          <a class="project-card" href="projects/research_methods_i/Erik_PSYC-250-01-2251_LiteratureReview_Rissman.pdf" target="_blank" rel="noopener">
+            <div class="project-meta">
+              <span>Literature review</span>
+              <span>2025</span>
+            </div>
+            <div class="project-art project-art-gold" aria-hidden="true">
+              <span class="paper-line line-one"></span>
+              <span class="paper-line line-two"></span>
+              <span class="paper-line line-three"></span>
+            </div>
+            <div class="project-copy">
+              <h3>Research Methods I</h3>
+              <p>Academic literature review and analysis</p>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="shell experience-grid">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-number">02</p>
+            <h2>Experience</h2>
+          </div>
+        </div>
+
+        <article class="experience-card">
+          <div class="experience-date">Fall 2021</div>
+          <div>
+            <p class="experience-role">Peer &amp; Curriculum Consultant</p>
+            <h3>NAIS-160: Web Design</h3>
+            <p>RIT / National Technical Institute for the Deaf</p>
+            <p class="experience-description">Collaborated with faculty to support students through video demonstrations and peer tutoring for web design coursework.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="education-section" id="education">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">03</p>
+            <h2>Education</h2>
+          </div>
+          <p>A multidisciplinary path through computing, psychology, accessibility, and culture.</p>
+        </div>
+
+        <div class="education-list">
+          <article>
+            <div class="education-year">2026—Present</div>
+            <div>
+              <h3>B.S. Human-Centered Computing</h3>
+              <p>Rochester Institute of Technology</p>
+            </div>
+            <p class="education-detail">Accessibility &amp; Instructional Technology · American Sign Language &amp; Deaf Cultural Studies</p>
+          </article>
+          <article>
+            <div class="education-year">2021—2025</div>
+            <div>
+              <h3>A.S. Applied Computer Technology</h3>
+              <p>Rochester Institute of Technology</p>
+            </div>
+            <p class="education-detail">Human-Centered Computing concentration</p>
+          </article>
+          <article>
+            <div class="education-year">2019—2020</div>
+            <div>
+              <h3>PC Repair &amp; Network Technician</h3>
+              <p>Georgia Piedmont Technical College</p>
+            </div>
+            <p class="education-detail">Technical certificate · 3.85 GPA</p>
+          </article>
+        </div>
+
+        <div class="course-strip" aria-label="Selected coursework">
+          <p>Selected coursework</p>
+          <div id="courseList"></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Erik Menchaca | All Rights Reserved</p>
-    <p id="last-updated">Last updated: </p>
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-kicker">Let’s create something useful.</p>
+        <a class="footer-email" href="mailto:Erik@mail.rit.edu">Erik@mail.rit.edu</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/erikmenchaca/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/erikmenchaca" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="Profile.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Erik Menchaca</p>
+    </div>
   </footer>
 
   <script src="assets/js/script.js"></script>
