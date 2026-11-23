@@ -477,7 +477,7 @@ h1 em {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 380px minmax(0, 1fr);
   gap: 40px;
 }
 
@@ -667,7 +667,7 @@ footer {
   .work-grid { grid-template-columns: 1fr 1fr; }
   .project-featured { grid-row: auto; grid-column: 1 / -1; }
   .project-featured .project-art { height: 330px; }
-  .experience-grid { grid-template-columns: 220px 1fr; }
+  .experience-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); }
 }
 
 @media (max-width: 720px) {
